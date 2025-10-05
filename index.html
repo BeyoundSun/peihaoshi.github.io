@@ -32,25 +32,26 @@
         background: #fff;
       }
 
-      /* 左右布局，不居中 */
+      /* 左右布局，不居中，减少两侧空白 */
       .wrapper {
         display: flex;
-        justify-content: space-between;  /* header 左，section 右 */
+        justify-content: space-between; /* 左右对齐 */
         align-items: flex-start;
-        padding: 20px;
+        padding: 10px 20px; /* 上下 10px，左右 20px，缩小空白 */
         box-sizing: border-box;
+        gap: 20px; /* header 和 section 之间间距 */
       }
 
       /* 左侧导航栏 */
       header {
-        flex: 0 0 220px;    /* 固定宽度 */
+        flex: 0 0 220px; /* 固定宽度 */
         padding: 20px;
         box-sizing: border-box;
       }
 
       /* 右侧正文 */
       section {
-        flex: 0 0 850px;    /* 固定宽度 */
+        flex: 0 0 850px; /* 固定宽度 */
         padding: 20px;
         box-sizing: border-box;
       }
@@ -98,6 +99,18 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+      }
+
+      /* 响应式：屏幕过小，header和section上下排列 */
+      @media (max-width: 1200px) {
+        .wrapper {
+          flex-direction: column;
+          padding: 10px;
+        }
+        header, section {
+          flex: 1 1 auto;
+          max-width: 100%;
+        }
       }
     </style>
   </head>
