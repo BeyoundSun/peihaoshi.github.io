@@ -39,51 +39,191 @@
     
     <style> 
       /* 重置默认边距和填充 */
-      button.accordion {  
-      font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-      cursor: pointer;
-      padding: 0px;
-      border: none;
-      text-align: left;
-      outline: none;
-      font-size: 100%;
-      transition: 0.3s;
-      background-color: #f8f8f8;
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
+      
+      /* 主体样式 - 确保整体居中 */
+      body {
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f9f9f9;
+        padding: 20px;
+        display: flex;
+        justify-content: center; /* 水平居中 */
+        align-items: flex-start; /* 顶部对齐 */
+        min-height: 100vh; /* 确保body至少占据整个视口高度 */
+      }
+      
+      /* 主容器 - 居中展示 */
+      .wrapper {
+        max-width: 1400px; /* 增加最大宽度 */
+        width: 100%; /* 确保容器宽度自适应 */
+        margin: 0 auto; /* 自动外边距实现居中 */
+        display: flex;
+        gap: 40px; /* 增加左右栏间距 */
+      }
+      
+      /* 左侧边栏 - 保持原有宽度 */
+      header {
+        flex: 0 0 280px; /* 固定宽度 */
+        background: white;
+        padding: 25px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      }
+      
+      /* 右侧内容区域 - 显著增加宽度 */
+      section {
+        flex: 1; /* 占据剩余所有空间 */
+        background: white;
+        padding: 30px 40px; /* 增加左右内边距 */
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        max-width: none; /* 移除最大宽度限制 */
+      }
+      
+      /* 段落样式 - 两端对齐 */
+      p {
+        text-align: justify;
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 1.2em;
+        text-justify: inter-word;
+        hyphens: auto;
+      }
+      
+      /* 头像样式 */
+      .profile-img {
+        display: block;
+        margin: 0 auto 20px;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid #f0f0f0;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      }
+      
+      /* 折叠面板样式 */
+      button.accordion {  
+        font: 16px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        cursor: pointer;
+        padding: 12px 15px;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 100%;
+        transition: 0.3s;
+        background-color: #f8f8f8;
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 5px;
+      }
+      
       button.accordion.active, button.accordion:hover {
-      background-color: #f8f8f8;
+        background-color: #e8e8e8;
       }
       
       button.accordion:after {
-      content: " [+] ";
-      font-size: 90%;
-      color:#777;
-      float: left;
-      margin-left: 1px;
+        content: " [+] ";
+        font-size: 90%;
+        color: #777;
+        float: left;
+        margin-right: 10px;
       }
 
-      button.accordion.active:after {  /* 给 class="accordion" 的按钮在激活(active)状态下，添加一个伪元素 :after */
-      content: " [\2212] ";            /* 设置在按钮文字后面显示的内容，这里的 \2212 是 Unicode 的“减号(−)”，通常表示折叠状态 */
+      button.accordion.active:after {
+        content: " [-] ";
       }
-      div.panel {                      /* 定义 class="panel" 的 div 样式 */
-      padding: 0 8px;                 /* 内边距，上下 0，左右 8px，给面板里的内容留点空白 */
-      margin-top: 5px;                 /* 上边距 5px，让面板和按钮之间有间隔 */
-      display: none;                   /* 默认不显示（折叠状态） */
-      background-color: white;         /* 面板背景色为白色 */
-      font-size: 100%;                 /* 字体大小为正常 100%（和父元素一致） */
+      
+      div.panel {
+        padding: 0 20px;
+        margin-top: 5px;
+        display: none;
+        background-color: white;
+        font-size: 100%;
+        text-align: justify;
       }
+      
       div.panel.show {
-      display: block !important;
+        display: block !important;
       }
+      
       .social-row {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
       }
+      
+      /* 链接样式 */
+      a {
+        color: #2980b9;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+      
+      a:hover {
+        color: #1a5276;
+        text-decoration: underline;
+      }
+      
+      /* 标题样式 */
+      h1 {
+        font-size: 28px;
+        margin-bottom: 15px;
+        color: #2c3e50;
+        text-align: center;
+      }
+      
+      h3 {
+        margin: 12px 0;
+      }
+      
+      /* 响应式设计 */
+      @media (max-width: 1200px) {
+        .wrapper {
+          max-width: 95%; /* 在中等屏幕上保持适当边距 */
+        }
+      }
+      
+      @media (max-width: 992px) {
+        .wrapper {
+          max-width: 98%; /* 在小屏幕上进一步增加宽度利用 */
+        }
+        
+        header {
+          flex: 0 0 250px; /* 稍微减小左侧边栏宽度 */
+        }
+      }
+      
+      @media (max-width: 768px) {
+        body {
+          padding: 10px; /* 移动端减少内边距 */
+        }
+        
+        .wrapper {
+          flex-direction: column;
+          max-width: 100%; /* 移动端使用全宽 */
+          gap: 20px;
+        }
+        
+        header, section {
+          flex: none;
+          width: 100%;
+        }
+        
+        section {
+          padding: 20px; /* 移动端减少内边距 */
+        }
+      }
     </style>
   </head>
   <body>
-      /* 主体样式 */
+
     <div class="wrapper">
       <header>
         <h1>Peihao Shi</h1>
@@ -103,9 +243,7 @@
           <a href="https://orcid.org/0000-0003-3607-0644"><i class="ai ai-fw ai-orcid"></i> ORCID</a><br>
           <a href="http://ideas.repec.org/f/pra541.html"><i class="ai ai-fw ai-ideas-repec"></i> RePEc</a><br>
           <a href="https://github.com/BeyoundSun"><i class="fab fa-fw fa-github"></i> GitHub</a><br>
-          <a href="https://tyleransom.substack.com" class="author-social" target="_blank"><i class="fas fa-fw fa-rss"></i> Substack</a><br>
           <a href="http://x.com/tyleransom" class="author-social" target="_blank"><i class="fab fa-fw fa-x-twitter"></i> X</a><br>
-          <a href="http://linkedin.com/in/tyleransom" class="author-social" target="_blank"><i class="fab fa-fw fa-linkedin"></i> LinkedIn</a><br>
           <a href="https://www.youtube.com/@structuraleconguy" class="author-social" target="_blank"><i class="fab fa-fw fa-youtube"></i> YouTube</a><br>
           <br>
         </div>
@@ -113,22 +251,19 @@
 
     <p><b>Contact:</b><br>Department of Economics<br>Wuhan University<br>322 CCD1, 308 Cate Center Drive<br>Norman, OK 73072</p>
     <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+
+        
       </header>
       <section>
-        <div style="text-align: center;">
-        <img src="IMG_Peihao.JPG" alt="Peihao Shi"
-         style="width:300px; height:300px; border-radius:50%; object-fit:cover;"></h3>
+        <img src="IMG_Peihao.JPG" alt="Peihao Shi" class="profile-img">
         
-  <p style="text-align: justify; font-size: 18px; line-height: 1.6;"> 
-  I am an research assistant of <a href="http://www.ou.edu/cas/economics">Economics</a> at the <a href="http://www.ou.edu/">University of Oklahoma</a>, a Research Fellow at the <a href="https://www.iza.org/">Institute for the Study of Labor (IZA)</a>, and a Fellow at <a href="https://www.globalabororganization.org/">Global Labor Organization (GLO)</a>. I received my PhD in <a href="http://econ.duke.edu">Economics</a> from <a href="http://www.duke.edu">Duke University</a> in 2015, where I specialized in dynamic models of human capital accumulation.</p>
-  <p style="text-align: justify; font-size: 18px; line-height: 1.6;"> 
-  My research focuses on enterprise economy, urban economics, and applications of machine learning. I have published extensively in leading economics journals, including the <i>Technological Forecasting and Social Change</i>, the <i>Business Strategy and the Environment</i>, the <i>Corporate Social Responsibility and Environmental Management</i>, and the <i>Economic Analysis and Policy</i>. My recent work has examined college admissions practices, educational inequality, and human capital development. I also serve as an Associate Editor of the <i>Annals of Economics and Statistics</i> and <i>Economics of Education Review</i>.</p>
-  
-  <p style="text-align: justify; font-size: 18px; line-height: 1.6;"> 
-  At OU, I direct the Economics BA/MA Program and teach courses in econometrics, data science, and economics of education at both undergraduate and graduate levels. My contributions to research and teaching were recognized with the 2022 Irene Rothbaum Outstanding Assistant Professor Award from the OU Dodge Family College of Arts & Sciences. My research has had significant policy impact and has been featured in major media outlets including the <i>New York Times</i>, <i>The Economist</i>, <i>The Atlantic</i>, and <i>The Guardian</i>. In 2025, I was awarded the Heritage Foundation Freedom and Opportunity Academic Prize in recognition of my scholarship and contributions to the academic community.</p>
- 
-  <p style="text-align: justify; font-size: 18px; line-height: 1.6;"> 
-  I bring strong technical expertise to my research, with proficiency in Matlab, Stata, R, Python, and Git. I also have advanced proficiency in English and beginning knowledge of Korean and German.</p>
+        <p>I am a research assistant of <a href="http://www.ou.edu/cas/economics">Economics</a> at the <a href="http://www.ou.edu/">University of Oklahoma</a>, a Research Fellow at the <a href="https://www.iza.org/">Institute for the Study of Labor (IZA)</a>, and a Fellow at <a href="https://www.globalabororganization.org/">Global Labor Organization (GLO)</a>. I received my PhD in <a href="http://econ.duke.edu">Economics</a> from <a href="http://www.duke.edu">Duke University</a> in 2015, where I specialized in dynamic models of human capital accumulation.</p>
+
+        <p>My research focuses on enterprise economy, urban economics, and applications of machine learning. I have published extensively in leading economics journals, including the <i>Technological Forecasting and Social Change</i>, the <i>Business Strategy and the Environment</i>, the <i>Corporate Social Responsibility and Environmental Management</i>, and the <i>Economic Analysis and Policy</i>. My recent work has examined college admissions practices, educational inequality, and human capital development. I also serve as an Associate Editor of the <i>Annals of Economics and Statistics</i> and <i>Economics of Education Review</i>.</p>
+
+        <p>At OU, I direct the Economics BA/MA Program and teach courses in econometrics, data science, and economics of education at both undergraduate and graduate levels. My contributions to research and teaching were recognized with the 2022 Irene Rothbaum Outstanding Assistant Professor Award from the OU Dodge Family College of Arts & Sciences. My research has had significant policy impact and has been featured in major media outlets including the <i>New York Times</i>, <i>The Economist</i>, <i>The Atlantic</i>, and <i>The Guardian</i>. In 2025, I was awarded the Heritage Foundation Freedom and Opportunity Academic Prize in recognition of my scholarship and contributions to the academic community.</p>
+
+        <p>I bring strong technical expertise to my research, with proficiency in Matlab, Stata, R, Python, and Git. I also have advanced proficiency in English and beginning knowledge of Korean and German.</p>
       </section>
     </div>
     <script src="javascripts/scale.fix.js"></script>
