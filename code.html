@@ -36,80 +36,132 @@
     <link rel="stylesheet" href="assets/css/academicons.min.css"/>
     <link rel="stylesheet" href="assets/css/academicons.css"/>
     
-    <style>
-      button.accordion {
-      font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-      cursor: pointer;
-      padding: 0px;
-      border: none;
-      text-align: left;
-      outline: none;
-      font-size: 100%;
-      transition: 0.3s;
-      background-color: #f8f8f8;
-      }
-      button.accordion.active, button.accordion:hover {
-      background-color: #f8f8f8;
-      }
-      button.accordion:after {
-      content: " [+] ";
-      font-size: 90%;
-      color:#777;
-      float: left;
-      margin-left: 1px;
+<style>
+      /* 页面整体设置 */
+      body {
+        font: 14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        background: #fff;
       }
 
-      button.accordion.active:after {
-      content: " [\2212] ";
+      /* wrapper 使用100%宽度，header左贴，section右贴 */
+      .wrapper {
+        display: flex;
+        width: 90%;
+        align-items: flex-start;  /* 顶部对齐 */
+        padding: 40px 40px;       /* 页面整体左右空白小 */
+        box-sizing: border-box;
       }
+
+      /* 左侧导航栏 */
+      header {
+        width: 220px;              /* 固定宽度 */
+        margin-right: 20px;        /* header与section之间空隙 */
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      /* 右侧正文 */
+      section {
+        width: 950px;              /* 固定宽度 */
+        margin-left: auto;         /* 右贴边 */
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      /* accordion 折叠按钮 */
+      button.accordion {  
+        font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        cursor: pointer;
+        padding: 0px;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 100%;
+        transition: 0.3s;
+        background-color: #f8f8f8;
+      }
+      button.accordion.active, button.accordion:hover {
+        background-color: #f8f8f8;
+      }
+      button.accordion:after {
+        content: " [+] ";
+        font-size: 90%;
+        color:#777;
+        float: left;
+        margin-left: 1px;
+      }
+      button.accordion.active:after {
+        content: " [\2212] ";
+      }
+
+      /* 折叠内容面板 */
       div.panel {
-      padding: 0 20px;
-      margin-top: 5px;
-      display: none;
-      background-color: white;
-      font-size: 100%;
+        padding: 0 8px;
+        margin-top: 5px;
+        display: none;
+        background-color: white;
+        font-size: 100%;
       }
       div.panel.show {
-      display: block !important;
+        display: block !important;
       }
+
+      /* 社交链接行 */
       .social-row {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
       }
+
+      /* 响应式：屏幕过小，header和section上下排列 */
+      @media (max-width: 1200px) {
+        .wrapper {
+          flex-direction: column;
+          padding: 10px;
+        }
+        header, section {
+          width: 100%;
+          max-width: 100%;
+          margin: 0 0 20px 0;
+        }
+      }
     </style>
   </head>
+
   <body>
     <div class="wrapper">
+      <!-- 左侧栏 -->
       <header>
-        <h1>Tyler Ransom</h1>
-        <p>Associate Professor of Economics<br>University of Oklahoma</p>
+        <h1>Peihao Shi</h1>
+        <p>Ph.D. in Economics<br>Wuhan University</p>
         <p>Research Fellow<br><a href="https://www.iza.org/person/24155/tyler-ransom">Institute for the Study of Labor (IZA)</a></p>
         <p>Fellow<br><a href="https://glabor.org/user/tyleransom/">Global Labor Organization (GLO)</a></p>
-    <h3><a href="https://tyleransom.github.io/">Home</a></h3>
+        <h3><a href="https://beyoundsun.github.io/peihaoshi.github.io/">Home</a></h3>   
         <h3><a href="https://tyleransom.github.io/research.html">Research</a></h3>
-    <h3><a href="https://tyleransom.github.io/research/CV.pdf">CV</a></h3>  
+        <h3><a href="https://tyleransom.github.io/research/CV.pdf">CV</a></h3>  
         <h3><a href="https://tyleransom.github.io/code.html">Code</a></h3> 
         <h3><a href="https://tyleransom.github.io/teaching.html">Teaching</a></h3> 
         <h3><a href="https://tyleransom.github.io/personal.html">Personal</a></h3>
         <b>Social</b><br>
         <div class="social-row">
-          <a href="mailto:ransom@ou.edu" class="author-social" target="_blank"><i class="fas fa-fw fa-envelope"></i> Email</a><br>
-          <a href="https://scholar.google.com/citations?user=eohlTTcAAAAJ&hl=en" target="_blank"><i class="ai ai-fw ai-google-scholar"></i> Scholar</a><br>
-          <a href="https://orcid.org/0000-0002-6910-0363"><i class="ai ai-fw ai-orcid"></i> ORCID</a><br>
+          <a href="peihaoshi@163.com" class="author-social" target="_blank"><i class="fas fa-fw fa-envelope"></i> Email</a><br>
+          <a href="https://scholar.google.com/citations?user=J3tFL2oAAAAJ&hl=zh-CN&oi=sra" target="_blank"><i class="ai ai-fw ai-google-scholar"></i> Scholar</a><br>
+          <a href="https://orcid.org/0000-0003-3607-0644"><i class="ai ai-fw ai-orcid"></i> ORCID</a><br>
           <a href="http://ideas.repec.org/f/pra541.html"><i class="ai ai-fw ai-ideas-repec"></i> RePEc</a><br>
-          <a href="http://github.com/tyleransom"><i class="fab fa-fw fa-github"></i> GitHub</a><br>
-          <a href="https://tyleransom.substack.com" class="author-social" target="_blank"><i class="fas fa-fw fa-rss"></i> Substack</a><br>
+          <a href="https://github.com/BeyoundSun"><i class="fab fa-fw fa-github"></i> GitHub</a><br>
           <a href="http://x.com/tyleransom" class="author-social" target="_blank"><i class="fab fa-fw fa-x-twitter"></i> X</a><br>
-          <a href="http://linkedin.com/in/tyleransom" class="author-social" target="_blank"><i class="fab fa-fw fa-linkedin"></i> LinkedIn</a><br>
           <a href="https://www.youtube.com/@structuraleconguy" class="author-social" target="_blank"><i class="fab fa-fw fa-youtube"></i> YouTube</a><br>
-          <br>
         </div>
         <br>
-
-    <p><b>Contact:</b><br>Department of Economics<br>University of Oklahoma<br>322 CCD1, 308 Cate Center Drive<br>Norman, OK 73072</p>
-    <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+        <p><b>Contact:</b><br>Department of Economics<br>Wuhan University<br>322 CCD1, 308 Cate Center Drive<br>Norman, OK 73072</p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </header>
+
+
+      
       <section>
   <h2><a id="computer-code" class="anchor" href="#computercode" aria-hidden="true"><span class="octicon octicon-link"></span></a>Computer Code</h2>
     <h3>Julia</h3>
