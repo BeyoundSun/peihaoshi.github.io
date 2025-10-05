@@ -38,13 +38,15 @@
     <style>
       /* 基础字体大小调整 */
       body {
-        font-size: 17px; /* 增大基础字体大小 */
+        font-size: 18px; /* 增大基础字体大小 */
         line-height: 1.6;
+        margin: 0;
+        padding: 0;
       }
       
       /* 标题字体调整 */
       h1, h2, h3 {
-        font-size: 1.6em; /* 相对基础字体大小调整 */
+        font-size: 1.4em; /* 相对基础字体大小调整 */
       }
       
       /* 段落样式 - 两端对齐 */
@@ -55,12 +57,12 @@
         margin-bottom: 1.2em; /* 段落间距 */
       }
       
-      /* 图片样式 - 圆形并居中 */
+      /* 图片样式 - 圆形并右对齐 */
       .profile-img {
-        display: block;
-        margin: 0 auto 20px;
-        width: 200px;
-        height: 200px;
+        float: right;
+        margin: 0 0 20px 30px;
+        width: 300px;
+        height: 300px;
         border-radius: 50%; /* 圆形 */
         object-fit: cover; /* 保持图片比例 */
         border: 4px solid #f0f0f0; /* 添加边框 */
@@ -130,34 +132,53 @@
         text-decoration: underline;
       }
       
-      /* 整体布局调整 */
+      /* 整体布局调整 - 增加页面宽度 */
       .wrapper {
-        max-width: 1200px;
+        max-width: 1400px; /* 增加最大宽度 */
         margin: 0 auto;
         padding: 20px;
       }
       
       header {
-        text-align: center;
+        text-align: left; /* 改为左对齐 */
         margin-bottom: 30px;
+        overflow: hidden; /* 清除浮动 */
       }
       
       section {
-        max-width: 800px;
-        margin: 0 auto;
+        max-width: 100%; /* 使用全宽 */
+        margin: 0;
+        overflow: hidden; /* 清除浮动 */
+      }
+      
+      /* 响应式设计 - 在小屏幕上恢复图片居中 */
+      @media (max-width: 768px) {
+        .profile-img {
+          float: none;
+          display: block;
+          margin: 0 auto 20px;
+        }
+        
+        header {
+          text-align: center;
+        }
+        
+        .wrapper {
+          max-width: 100%;
+          padding: 10px;
+        }
       }
     </style>
   </head>
   <body>
     <div class="wrapper">
       <header>
+        <img src="IMG_Peihao.JPG" alt="Peihao Shi" class="profile-img">
+        
         <h1>Peihao Shi</h1>
         <p>Ph.D. in Economics<br>Wuhan University</p>
         <p>Research Fellow<br><a href="https://www.iza.org/person/24155/tyler-ransom">Institute for the Study of Labor (IZA)</a></p>
         <p>Fellow<br><a href="https://glabor.org/user/tyleransom/">Global Labor Organization (GLO)</a></p>
-        
-        <!-- 圆形头像 -->
-        <img src="IMG_Peihao.JPG" alt="Peihao Shi" class="profile-img">
         
         <h3><a href="https://tyleransom.github.io/">Home</a></h3>
         <h3><a href="https://tyleransom.github.io/research.html">Research</a></h3>
