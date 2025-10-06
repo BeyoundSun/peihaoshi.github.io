@@ -154,11 +154,51 @@
         </div>
        
         <!-- Google Fonts 引入：放在<head>中 -->
-        <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
-         <!-- 名言段落 -->
-         <p style="text-align: center; font-family: 'Cinzel Decorative', serif; font-size: 18px; font-weight: bold; margin-top: 15px;">
-          “The rational is actual and the actual is rational.” — G.W.F. Hegel
-        </p>
+   <!-- 在你的 <head> 中加入这一行，引入艺术字体 -->
+<link href="https://fonts.googleapis.com/css2?family=Almendra+Display:wght@700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+
+<!-- 在你希望插入名言的地方 -->
+<div class="jay-nocturne-quote">
+  “The rational is actual and the actual is rational.” — G.W.F. Hegel
+</div>
+
+<style>
+  .jay-nocturne-quote {
+    text-align: center;
+    font-family: 'Almendra Display', 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #f5f1e8;
+    margin: 2em 0;
+    position: relative;
+    display: inline-block;
+    line-height: 1.2;
+    /* 微倾斜，给一点不规则感 */
+    transform: rotate(-0.5deg);
+    /* 给些笔触效果（光影、纹理） */
+    text-shadow:
+      1px 1px 2px rgba(0,0,0,0.4),
+      -1px -1px 2px rgba(0,0,0,0.2);
+  }
+  .jay-nocturne-quote::before,
+  .jay-nocturne-quote::after {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 2px;
+    background: #f5f1e8;
+    top: 50%;
+  }
+  .jay-nocturne-quote::before {
+    left: -45%;
+    transform: translateY(-50%) rotate(10deg);
+  }
+  .jay-nocturne-quote::after {
+    right: -45%;
+    transform: translateY(-50%) rotate(-10deg);
+  }
+</style>
+
 
         <p style="text-align: justify; font-size: 15.5px; line-height: 1.4; text-indent: 2em;"> 
           I am an research assistant of <a href="http://www.ou.edu/cas/economics">Economics</a> at the <a href="http://www.ou.edu/">University of Oklahoma</a>, a Research Fellow at the <a href="https://www.iza.org/">Institute for the Study of Labor (IZA)</a>, and a Fellow at <a href="https://www.globalabororganization.org/">Global Labor Organization (GLO)</a>. I received my PhD in <a href="http://econ.duke.edu">Economics</a> from <a href="http://www.duke.edu">Duke University</a> in 2015, where I specialized in dynamic models of human capital accumulation.
