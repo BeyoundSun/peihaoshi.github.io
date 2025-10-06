@@ -1,1 +1,436 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tyler Ransom by tyleransom</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-29643011-3', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <!-- New GA4 tracking code, see https://support.google.com/analytics/answer/10271001#analyticsjs-enable-basic --> 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GNJD50R0Z7"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GNJD50R0Z7');
+    </script>
+
+    <!-- For all browsers -->
+    <link rel="stylesheet" href="assets/css/academicons.min.css"/>
+    <link rel="stylesheet" href="assets/css/academicons.css"/>
+    
+ <style>
+      /* 页面整体设置 */
+      body {
+        font: 14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        background: #fff;
+      }
+
+      /* wrapper 使用100%宽度，header左贴，section右贴 */
+      .wrapper {
+        display: flex;
+        width: 90%;
+        align-items: flex-start;  /* 顶部对齐 */
+        padding: 40px 40px;       /* 页面整体左右空白小 */
+        box-sizing: border-box;
+      }
+
+      /* 左侧导航栏 */
+      header {
+        width: 220px;              /* 固定宽度 */
+        margin-right: 20px;        /* header与section之间空隙 */
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      /* 右侧正文 */
+      section {
+        width: 950px;              /* 固定宽度 */
+        margin-left: auto;         /* 右贴边 */
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      /* accordion 折叠按钮 */
+      button.accordion {  
+        font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        cursor: pointer;
+        padding: 0px;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 100%;
+        transition: 0.3s;
+        background-color: #f8f8f8;
+      }
+      button.accordion.active, button.accordion:hover {
+        background-color: #f8f8f8;
+      }
+      button.accordion:after {
+        content: " [+] ";
+        font-size: 90%;
+        color:#777;
+        float: left;
+        margin-left: 1px;
+      }
+      button.accordion.active:after {
+        content: " [\2212] ";
+      }
+
+      /* 折叠内容面板 */
+      div.panel {
+        padding: 0 8px;
+        margin-top: 5px;
+        display: none;
+        background-color: white;
+        font-size: 100%;
+      }
+      div.panel.show {
+        display: block !important;
+      }
+
+      /* 社交链接行 */
+      .social-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      /* 响应式：屏幕过小，header和section上下排列 */
+      @media (max-width: 1200px) {
+        .wrapper {
+          flex-direction: column;
+          padding: 10px;
+        }
+        header, section {
+          width: 100%;
+          max-width: 100%;
+          margin: 0 0 20px 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <!-- 左侧栏 -->
+      <header>
+        <h1>Peihao Shi</h1>
+        <p>Ph.D. in Economics<br>Wuhan University</p>
+        <p>Research Fellow<br><a href="https://www.iza.org/person/24155/tyler-ransom">Institute for the Study of Labor (IZA)</a></p>
+        <p>Fellow<br><a href="https://glabor.org/user/tyleransom/">Global Labor Organization (GLO)</a></p>
+        <h3><a href="https://beyoundsun.github.io/peihaoshi.github.io/">Home</a></h3>   
+        <h3><a href="https://beyoundsun.github.io/peihaoshi.github.io/research.html">Research</a></h3>
+        <h3><a href="https://beyoundsun.github.io/peihaoshi.github.io/research/CV_SHI.pdf">CV</a></h3>  
+        <h3><a href="https://beyoundsun.github.io/peihaoshi.github.io/code.html">Code</a></h3> 
+        <h3><a href="https://beyoundsun.github.io/peihaoshi.github.io/teaching.html">Teaching</a></h3> 
+        <h3><a href="https://beyoundsun.github.io/peihaoshi.github.io/personal.html">Personal</a></h3>
+        <b>Social</b><br>
+        <div class="social-row">
+          <a href="peihaoshi@163.com" class="author-social" target="_blank"><i class="fas fa-fw fa-envelope"></i> Email</a><br>
+          <a href="https://scholar.google.com/citations?user=J3tFL2oAAAAJ&hl=zh-CN&oi=sra" target="_blank"><i class="ai ai-fw ai-google-scholar"></i> Scholar</a><br>
+          <a href="https://orcid.org/0000-0003-3607-0644"><i class="ai ai-fw ai-orcid"></i> ORCID</a><br>
+          <a href="http://ideas.repec.org/f/pra541.html"><i class="ai ai-fw ai-ideas-repec"></i> RePEc</a><br>
+          <a href="https://github.com/BeyoundSun"><i class="fab fa-fw fa-github"></i> GitHub</a><br>
+          <a href="http://x.com/tyleransom" class="author-social" target="_blank"><i class="fab fa-fw fa-x-twitter"></i> X</a><br>
+          <a href="https://www.youtube.com/@structuraleconguy" class="author-social" target="_blank"><i class="fab fa-fw fa-youtube"></i> YouTube</a><br>
+        </div>
+        <br>
+        <p><b>Contact:</b><br>Department of Economics<br>Wuhan University<br>322 CCD1, 308 Cate Center Drive<br>Norman, OK 73072</p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </header>
+   
+      <section>
+    <!-- No R&Rs or WPs at the moment
+    <h2><a id="recent-RRs-updated" class="anchor" href="#RRpapers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Papers under Revision to Resubmit</h2>
+    <p style="margin:0"> Coming soon. <br> <br> 
+
+    <hr>
+    -->
+   <!-- 第一板块：Working Papers标题 -->
+    <h2><a id="recent-papers-updated" class="anchor" href="#workingpapers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Working Papers</h2>
+   
+    <!-- 第1篇工作论文 -->
+    <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://tyleransom.github.io/research/college-sports-SES.pdf">Do Elite Universities Pick Sports to Pick Students? Athletic Admissions and SES Targeting</a> <br> with <a href="https://ahmedelfatmaoui.github.io/">Ahmed El Fatmaoui</a> <br> (updated August 14, 2025) <br><button class="accordion">
+      Abstract
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> This study investigates the extent to which U.S. universities strategically use athletic admissions to shape the socioeconomic status (SES) of their student bodies. Using a novel dataset linking NCAA roster data to neighborhood characteristics, we document substantial SES segregation across sports and universities. More selective institutions, particularly elite private universities, allocate up to 30% of enrollment to athletes who typically come from higher-SES backgrounds than their non-athlete peers. However, contrary to popular belief, we find that elite institutions enroll similarly wealthy athletes across all sports. Estimates of our structural model of sports bundle choice reveal that this SES homogeneity across sports limits universities' ability to systematically choose sports offerings to target higher-SES students. Counterfactual analyses demonstrate that athletic enrollment caps would create additional seats for non-athletes but require complementary policies to meaningfully impact socioeconomic mobility. </p></div><br>
+ 
+    <!-- 第2篇工作论文 -->
+    <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://tyleransom.github.io/research/obesity-seed-oils.pdf">Are Vegetable Seed Oils Fueling the Obesity Epidemic?</a> <br> with Tucker Goodrich <br> (updated December 3, 2024) <br><button class="accordion">
+      Abstract
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> We argue that increased consumption of vegetable seed oils high in omega-6 polyunsaturated fats has driven obesity in the United States, a link overlooked in the economics literature. Obesity rates have closely tracked the level of seed oils in the food supply since 1960, while diverging from calorie intake and exercise trends post-2000. We present evidence from biochemistry supporting this hypothesis, demonstrating how seed oils disrupt metabolism, fat storage, and other biochemical processes. We document supporting evidence of these mechanisms in economics research and population health trends. We then develop a conceptual theory of imperfect information to explain consumer overconsumption of these oils, considering the interactions among food and drug companies, scientists, government regulators, and medical providers in shaping dietary information and the overall food supply. Finally, we discuss policy implications, emphasizing the need for a coordinated approach. </p></div>
+    <p style="margin:0"><button class="accordion">
+      Slides
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> <a href="https://tyleransom.github.io/research/ASHEcon-2025-seed-oils-presentation.pdf">ASHEcon 2025 presentation</a> </p></div>
+    <p style="margin:0"><button class="accordion">
+      Media coverage
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> <a href="https://www.youtube.com/watch?v=9rL5YFgOFK0"><i>The EconBuff Podcast</i></a> </p></div><br>
+    <hr>                    
+
+
+    <!-- 第二板块：已经发表论文标题 -->
+    <h2><a id="published-papers-updated" class="anchor" href="#publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Research Article</h2>
+    
+     <!-- 第1篇发表论文： TFSC -->
+    <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://beyoundsun.github.io/peihaoshi.github.io/research/PubPapers/Shi_TFSC2025.pdf">Alignment of words and actions? Government environmental attention and enterprise digital transformation</a> <br> DOI: <a href="https://doi.org/10.1016/j.techfore.2024.123888">https://doi.org/10.1016/j.techfore.2024.123888</a> <br> with <a href="https://sites.google.com/site/estebanmaucejo/">Peihao Shi</a>, and <a href="https://cem.swu.edu.cn/info/1170/5440.htm">Qinghua Huang</a> <br> <a href="https://www.sciencedirect.com/journal/technological-forecasting-and-social-change"><i>Technological Forecasting and Social Change</i></a>, 2025, 133 (1): 53&ndash;110. <br><button class="accordion">
+      Abstract
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> This study employs a unique dataset of A-share listed companies from 2007 to 2021 to investigate the impact of government environmental attention on enterprise digital transformation (EDT) and its underlying mechanisms. Empirical findings document that in response to upholding organizational legitimacy, government environmental attention remarkably favors EDT. This core conclusion remains robust after addressing endogeneity concerns and alternative robustness tests. Mechanism analysis unveils that intensified government environmental attention propels companies to expedite green technology innovation, alleviate financing constraints, and enhance human capital quality, all accelerating EDT. Subsequent investigations indicate that heightened government environmental attention notably impacts EDT more for larger plants and highly polluting industries. In regions with lower financial development, government environmental attention serves as a reliable signaling mechanism, motivating EDT. These findings guide plants in accelerating EDT for enhanced sustainable development while shedding light on the evolving mechanisms of government attention allocation and EDT, which offers insights for future research on the correlation between government actions and corporate environmental governance. </p></div>
+    <p style="margin:0"><button class="accordion">
+      Replication files
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> <a href="https://github.com/tyleransom/Dropout-JPE/releases/tag/v1.0">GitHub repository</a> <br> <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/THFJTZ">Harvard Dataverse repository</a> </p></div>
+    <p style="margin:0"><button class="accordion">
+      Other versions
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> <a href="http://www.nber.org/papers/w22325">NBER Working Paper No. 22325</a> (June 2016) <br> <a href="https://www.iza.org/publications/dp/16585/college-attrition-and-the-dynamics-of-information-revelation">IZA Discussion Paper No. 16585</a> (November 2023) <br> <a href="https://tyleransom.github.io/research/CollegeDropout2024Jan31.pdf">Accepted Version</a> (January 2024) </p></div><br>
+
+
+     <!-- 第5篇发表论文： RE:新能源 -->
+    <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://beyoundsun.github.io/peihaoshi.github.io/research/PubPapers/Shi_RE2025.pdf">Benefits of establishing new energy consumption cities: Evidence from industrial enterprises sustainability</a> <br> DOI: <a href="https://doi.org/10.1016/j.renene.2025.122916">https://doi.org/10.1016/j.renene.2025.122916</a></a> <br> with <a href="https://sites.google.com/site/estebanmaucejo/">Peihao Shi</a>, and <a href="https://cem.swu.edu.cn/info/1196/5590.htm">Jianhui Liu</a> <br> <a href="https://www.sciencedirect.com/journal/renewable-energy"><i>Renewable Energy</i></a>, 2025, 133 (1): 53&ndash;110. <br><button class="accordion">
+      Abstract
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> The transition to renewable energy consumption is a key priority for advancing global sustainable development. This study investigates the impact of the Renewable Energy Consumption Demonstration City (NECDC) policy on industrial enterprise sustainability. Employing a difference-in-differences design, this paper documents that the NECDC policy significantly raises industrial enterprise sustainability, yielding dual benefits in environmental governance and income growth. The effect is primarily driven by substantial green innovation and lowered financing constraints. Moreover, the NECDC policy is particularly effective in cities facing high environmental pressures, with its positive effects most pronounced in large industrial firms, heavily polluting sectors, and enterprises with solid developmental foundations. These findings provide valuable insights for policymakers worldwide seeking to develop policies that optimize energy structures for sustainable development. </p></div>
+    <p style="margin:0"><button class="accordion">
+      Other versions
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> <a href="http://www.nber.org/papers/w22325">NBER Working Paper No. 22325</a> (June 2016) <br> <a href="https://www.iza.org/publications/dp/16585/college-attrition-and-the-dynamics-of-information-revelation">IZA Discussion Paper No. 16585</a> (November 2023) <br> <a href="https://tyleransom.github.io/research/CollegeDropout2024Jan31.pdf">Accepted Version</a> (January 2024) </p></div><br>
+
+
+     <!-- 第6篇发表论文： PSEP -->
+    <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://beyoundsun.github.io/peihaoshi.github.io/research/PubPapers/Shi_PSEM2024.pdf">Assessing the evolution and convergence of energy-related carbon emission efficiency in the Yangtze River Economic Belt</a> <br> DOI: <a href="https://doi.org/10.1016/j.psep.2024.09.058">https://doi.org/10.1016/j.psep.2024.09.058</a></a> <br> with <a href="https://sites.google.com/site/estebanmaucejo/">Peihao Shi</a>, and <a href="http://www.amaurel.net/">Qinghua Huang</a> <br> <a href="https://www.sciencedirect.com/journal/process-safety-and-environmental-protection"><i>Process Safety and Environmental Protection</i></a>, 2025, 133 (1): 53&ndash;110. <br><button class="accordion">
+      Abstract
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> This paper examines the spatiotemporal evolution and convergence of energy-related carbon emission efficiency in the Yangtze River Economic Belt (YREB) using prefecture-level data from 2012 to 2021. Employing the SBM-GML strategy, kernel density estimation, the Dagum decomposition method, and the spatial econometric model, the study identifies three main findings: (1) The energy-related carbon emission efficiency in the YREB demonstrates a phased upward trend, particularly after 2014. (2) Pronounced regional disparities are observed, with downstream areas displaying higher efficiency compared to midstream and upstream regions, driven primarily by notable density variations and intra-regional disparities. (3) The analysis reveals both σ-convergence and β-convergence dynamics, highlighting varied spatial effects across regions. Factors such as economic development, industrial structure, and financial incentives exhibit diverse impacts on efficiency, underscoring substantial heterogeneity. This study offers empirical insights crucial for enhancing energy-related carbon emission efficiency in pivotal economic zones. </p></div>
+    <p style="margin:0"><button class="accordion">
+       Other versions
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> <a href="http://www.nber.org/papers/w22325">NBER Working Paper No. 22325</a> (June 2016) <br> <a href="https://www.iza.org/publications/dp/16585/college-attrition-and-the-dynamics-of-information-revelation">IZA Discussion Paper No. 16585</a> (November 2023) <br> <a href="https://tyleransom.github.io/research/CollegeDropout2024Jan31.pdf">Accepted Version</a> (January 2024) </p></div><br>
+
+
+     <!-- 第7篇发表论文： ESPR2023 -->
+    <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://beyoundsun.github.io/peihaoshi.github.io/research/PubPapers/Shi_ESPR2023.pdf">Voting by mouth: media attention and environmental governance </a> <br> 
+         <!-- 论文DOI信息 -->
+       DOI: <a href="https://doi.org/10.1007/s11356-023-29506-5">
+            https://doi.org/10.1007/s11356-023-29506-5  </a> <br> 
+          <!-- 论文作者 -->
+       with <a href="https://sites.google.com/site/estebanmaucejo/">Peihao Shi</a>, 
+            <a href="https://jmxy.shou.edu.cn/_t37/2023/0925/c17431a322266/page.htm">Lihui Yin</a>, 
+            and Chuanqing Wu   </a> <br> 
+           <!-- 期刊信息 -->
+        <a href="https://link.springer.com/journal/11356" > 
+          <i>Environmental Science and Pollution Research</i></a>, 2025, 133 (1): 53&ndash;110. 
+        <br><button class="accordion">
+          <!-- 摘要 -->
+      Abstract
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;">
+      <p> 
+        External regulation is crucial for environmental protection. This study investigates the impact of media 
+        attention on corporate environmental governance from 2011 to 2021, using China’s public companies as our 
+        samples. The empirical results indicate that media attention consistently and significantly enhances 
+        corporate environmental governance. This effect remains robust across endogeneity considerations and alternative tests. 
+        Additionally, in regions with higher marketization and stronger rule of law frameworks, the efficacy of media attention in 
+        improving corporate environmental performance becomes remarkably pronounced. Further analysis unveils that media attention 
+        positively impacts environmental governance by elevating public awareness, refining internal management efficiency, and 
+        fostering innovative strategies for minimizing environmental impact. These results offer empirical backing for the reinforcement 
+        of external oversight and corporate governance practices. 
+      </p></div>
+        
+    <p style="margin:0"><button class="accordion">
+       Other versions
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> <a href="http://www.nber.org/papers/w22325">NBER Working Paper No. 22325</a> (June 2016) <br> <a href="https://www.iza.org/publications/dp/16585/college-attrition-and-the-dynamics-of-information-revelation">IZA Discussion Paper No. 16585</a> (November 2023) <br> <a href="https://tyleransom.github.io/research/CollegeDropout2024Jan31.pdf">Accepted Version</a> (January 2024) </p></div><br>
+
+
+        
+     <!-- 第8篇发表论文： JICEP2025 -->
+    <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://beyoundsun.github.io/peihaoshi.github.io/research/PubPapers/Yin_Shi_JICEP2025.pdf">Catalyzing Green Innovation: The Role of Green Finance in Sustainable Development</a> <br> DOI: <a href="https://doi.org/10.1142/S1793993325500218">https://doi.org/10.1142/S1793993325500218</a> <br> with <a href="https://jmxy.shou.edu.cn/_t37/2023/0925/c17431a322266/page.htm">Lihui Yin</a>, and <a href="http://www.amaurel.net/">Peihao Shi</a> <br> <a href="https://www.worldscientific.com/worldscinet/jicep"><i>Journal of International Commerce, Economics and Policy</i></a>, 2025, 133 (1): 53&ndash;110. <br><button class="accordion">
+      Abstract
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> Utilizing China’s Green Finance Reform and Innovation Pilot Zone (GFRIP) policy as a quasi-natural experiment, we investigate the impact of green finance on green innovation. Analyzing data from publicly listed companies from 2010 to 2020, our study finds that the number of green patents in GFRIP regions exceeds those in other regions by 33.1%. Additionally, the GFRIP policy demonstrates anticipatory, long-term, and spillover effects on the number of corporate green innovations. The policy’s impact is more pronounced in economically developed regions, ecologically resource-rich areas, and among private enterprises. Furthermore, the GFRIP policy enhances corporate environmental behavior, alleviates corporate financing constraints, and boosts corporate R&D investment. </p></div>
+    <p style="margin:0"><button class="accordion">
+           Other versions
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> <a href="http://www.nber.org/papers/w22325">NBER Working Paper No. 22325</a> (June 2016) <br> <a href="https://www.iza.org/publications/dp/16585/college-attrition-and-the-dynamics-of-information-revelation">IZA Discussion Paper No. 16585</a> (November 2023) <br> <a href="https://tyleransom.github.io/research/CollegeDropout2024Jan31.pdf">Accepted Version</a> (January 2024) </p></div><br>
+
+
+     <!-- 第9篇发表论文： JEM2024 -->
+    <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://beyoundsun.github.io/peihaoshi.github.io/research/PubPapers/Wang_Shi_JEM2024.pdf">The social effects of energy regulation: Energy-consuming rights trading system and corporate labor demand</a> <br> DOI: <a href="https://doi.org/10.1016/j.jenvman.2024.121842">https://doi.org/10.1016/j.jenvman.2024.121842</a> <br> with <a href="http://www.amaurel.net/">Hao Wang</a>, Chengkui Liu,  <a href="http://www.amaurel.net/">Peihao Shi</a>, and Yuqin Wang</a> <br> <a href="https://www.sciencedirect.com/journal/journal-of-environmental-management"><i>Journal of Environmental Management</i></a>, 2025, 133 (1): 53&ndash;110. <br><button class="accordion">
+      Abstract
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> Although it is a key measure to control energy consumption and promote the improvement of industrial structure, energy market allocation reform has rarely been concerned with its impact on employment, an important livelihood issue. To fill this gap, this paper takes the Energy-Consumption Rights Trading System (ECRTS) enacted by China in 2016 as a research background and adopts the difference-in-difference approach to explore the effects and mechanisms of the ECRTS on enterprise labor demand. The results show that the ECRTS significantly reduces firms' labor demand, particularly for low-skilled workers, through both production scale effects and technological upgrading effects. Specifically, the ECRTS has led to a decrease in sales revenues and an increase in labor productivity, thereby reducing firms' labor demand. Heterogeneity tests indicate that the ECRTS has a greater impact on employment in firms with lower energy-consumption intensity, domestic capital injections, weaker innovation capacity, and lower market power. The paper also explores the welfare consequences of the policy, finding that while the ECRTS does not improve the environmental performance of firms it does not pass on the compliance costs of regulations to incumbent workers. The overall impact is neutral. This paper extends the study of the economic consequences of the ECRTS and has implications for other developing countries in reconciling energy regulation and employment. </p></div>
+    <p style="margin:0"><button class="accordion">
+      Other versions
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> <a href="http://www.nber.org/papers/w22325">NBER Working Paper No. 22325</a> (June 2016) <br> <a href="https://www.iza.org/publications/dp/16585/college-attrition-and-the-dynamics-of-information-revelation">IZA Discussion Paper No. 16585</a> (November 2023) <br> <a href="https://tyleransom.github.io/research/CollegeDropout2024Jan31.pdf">Accepted Version</a> (January 2024) </p></div><br>
+
+      
+  <!-- 第10篇发表论文： JCR2019 -->
+    <p style="margin:0"> 
+      <a style="margin:0; font-size:100%; font-weight:bold" 
+        href="https://beyoundsun.github.io/peihaoshi.github.io/research/PubPapers/Shi_JCR2019.pdf">
+        The Impact of Institutional Ownership on Corporates' Environmental Responsibility: Empirical Evidence from Coastal Public Companies in China
+      </a> <br> 
+      DOI: <a href="https://doi.org/10.2112/SI96-002.1">
+                     https://doi.org/10.2112/SI96-002.1
+          </a>  <br> 
+      with <a  href="http://www.amaurel.net/"> Peihao Shi </a>, 
+                     Peng Hu, Xiding Chen, and Fangfang Zhang  <br> 
+      <a href="https://bioone.org/journals/journal-of-coastal-research">
+        <i>Journal of Coastal Research</i></a>, 2025, 133 (1): 53&ndash;110. 
+      <br><button class="accordion">
+      Abstract
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> The environmental problems in coastal areas of China are attracting more and more attention, and how to control and guide coastal enterprises to fulfill environmental responsibilities have become an urgent issue to be solved. Institutional ownership, as an external supervisory force, can play a restrictive role in the production of enterprises. Therefore, this paper includes the data of China's coastal public companies from 2010 to 2016 to study the relationship between institutional ownership and corporate environmental responsibility (CER). The results show that institutional ownership, as an external restraint force, can promote enterprises to actively fulfill CER, which is more significant in state-owned enterprises. Further research also finds that different types of institutional ownership have heterogeneous roles in restraining enterprises from fulfilling environmental responsibilities. The conclusions of this study can provide theoretical support for enterprises to adjust equity structure and enhance the performance of environmental responsibility by introducing external ownership. Based on these findings, government may also formulate corresponding policies and promote the implementation of environmental responsibility. </p></div>
+    <p style="margin:0"><button class="accordion">
+      Other versions
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> <a href="http://www.nber.org/papers/w22325">NBER Working Paper No. 22325</a> (June 2016) <br> <a href="https://www.iza.org/publications/dp/16585/college-attrition-and-the-dynamics-of-information-revelation">IZA Discussion Paper No. 16585</a> (November 2023) <br> <a href="https://tyleransom.github.io/research/CollegeDropout2024Jan31.pdf">Accepted Version</a> (January 2024) </p></div><br>
+
+      
+
+        
+  <!--全要素模板 -->    
+    <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://doi.org/10.3368/jhr.0421-11641R1">Divergent: The Time Path of Legacy and Athlete Admissions at Harvard</a> <br> with <a href="http://public.econ.duke.edu/~psarcidi/">Peter Arcidiacono</a> and <a href="http://www.terry.uga.edu/directory/economics/josh-kinsler">Josh Kinsler</a> <br> <i>Journal of Human Resources</i>, 2024, 59 (3): 653&ndash;683. <b>(Lead Article)</b> <br><button class="accordion"> 
+    
+Abstract   
+    </button>   
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> We examine how increased admissions competition at elite US colleges has affected the admissions advantage that legacies and athletes (LA) receive. Using 18 years of Harvard admissions data, we show that non-legacy, non-athlete (NLNA) applications expanded while LA applications remained flat. Yet, the share of LA admits remained stable, implying substantial <i>increases</i> in LA admissions advantages. These facts imply a strong degree of complementarity in the number of LA admits and overall admit quality. If the admissions advantages for LA applicants had been constant throughout this period, there would have been a large increase in the number of minority admits. </p></div>
+    <p style="margin:0"><button class="accordion">
+
+Online Appendix
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> <a href="https://tyleransom.github.io/research/DivergentOnlineAppendix.pdf">Online Appendix</a> </p></div>
+    <p style="margin:0"><button class="accordion">
+      
+Other versions
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> <br> <a href="https://tyleransom.github.io/research/racialpref.pdf">Accepted version</a> (March 2023) <br> <a href="http://www.nber.org/papers/w29964">NBER Working Paper No. 29964</a> (April 2022) <br> <a href="https://www.iza.org/publications/dp/15240/what-the-students-for-fair-admissions-cases-reveal-about-racial-preferences">IZA Discussion Paper No. 15240</a> (April 2022) </p></div>
+    <p style="margin:0"><button class="accordion">
+      
+Video presentation
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> <br> <a href="https://www.youtube.com/watch?v=D9gMyiAEtus">Hoover Institution</a> </p></div>
+    <p style="margin:0"><button class="accordion">
+      
+
+Replication files
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> <a href="https://github.com/tyleransom/Divergent-JHR/releases/tag/v1.0">Data &amp; code for replication</a> <br> <a href="https://doi.org/10.5281/zenodo.5764855"><img src="https://zenodo.org/badge/435621674.svg" alt="DOI"></a> </p></div>
+    <p style="margin:0"><button class="accordion">
+
+BibTeX citation
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> <pre> <code>
+@article{AKR2024JHR,
+author = {Arcidiacono, Peter and Kinsler, Josh and Ransom, Tyler},
+title = {Divergent: The Time Path of Legacy and Athlete Admissions at Harvard},
+journal = {Journal of Human Resources},
+volume = {59},
+number = {3},
+pages = {653--683},
+year = {2024},
+doi = {10.3368/jhr.0421-11641R1}
+}
+</code> </pre> </p></div>
+        
+    <p style="margin:0"><button class="accordion"> 
+Media coverage
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> <a href="https://www.citylab.com/life/2019/05/moving-location-new-city-how-much-cost-mobile-rooted-stuck/590521/"><i>CityLab</i></a> </p></div><br>
+    <hr>                    
+
+
+ <!-- 第三板块：Works in Progress --> 
+    <h2><a id="works-in-progress" class="anchor" href="#workinprogress" aria-hidden="true"><span class="octicon octicon-link"></span></a>Academic Lecture</h2>
+
+    <p style="margin:0"> <b>Beating the Heat: Temperature and Spatial Reallocation over the Long Run</b> <br> with <a href="https://www.christosmakridis.com/">Christos Makridis</a>. <br><button class="accordion">
+      Abstract
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"> <p> Does temperature affect real economic activity? Using the annual Current 
+      Population Survey between 1963 and 2015, we show that there is no association between temperature and earnings, hours, or output after controlling for time-
+      invariant spatial heterogeneity and time-varying demographic factors. These results are robust to five separate sources of micro-data, different sampling 
+      horizons, functional forms, spatial measures of temperature, and subsets of the data. This paper studies the relationship between temperature and productivity 
+      across space and time. Motivated by these null results, we develop a spatial equilibrium model where temperature can affect not only firm productivity, but also 
+      individual locational choice. After calibrating the model, we use it to disentangle the role of reallocation versus actual productivity losses in the U.S. economy 
+      between 1980 and 2015. Nearly all of the variation is driven by reallocation. We subsequently use the model to evaluate a counterfactual climate scenario and recover 
+      a new spatial equilibrium for the U.S. economy by 2050. </p>
+    </div><p style="margin:0"><button class="accordion">
+      
+    Online Appendix
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"<p> 
+      <a href="https://tyleransom.github.io/research/DivergentOnlineAppendix.pdf">Online Appendix</a> 
+      </p</div><br 
+      
+
+
+    <p style="margin:0"> <b>The Role of Supply and Demand Factors in Explaining the Migration of College Majors</b> <br><button class="accordion">
+      Abstract
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p>  This paper documents a new stylized fact about the United States labor market: internal migration rates are dramatically different across college majors. For some college majors, migration rates are even lower than those without a college degree. I relate major migration rates with majors' spatial concentration and find that a major's spatial concentration explains about one fourth of the cross-major variation in migration rates. With this descriptive evidence as a guide, I estimate a structural model of locational choice where college graduates have heterogeneous preferences---at the detailed major level---for living close to home, and for working in a location with a high concentration of their fellow majors. Using estimates of the structural model, I decompose the cross-major migration rates into supply and demand factors and find that supply factors (i.e. moving costs) explain the vast majority of differences in migration rates across majors. My findings underscore the difficulty in attracting college majors to a particular location using demand-side investments. My results also highlight the importance of place in determining the labor market outcomes of college majors.</p></div><br>
+
+    <p style="margin:0"> <b>Measuring Women's Wage Returns to Human Capital</b> <br> with <a href="https://bschool.pepperdine.edu/about/people/faculty/jared-ashworth-professor-of-economics/">Jared Ashworth</a>. <br><button class="accordion">
+      Abstract
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> This paper estimates the wage returns to schooling and actual early work experiences for young women using the NLSY surveys. We estimate a dynamic model of young women’s schooling, work, marriage and fertility decisions in order to account for the likely impacts on future wages. The results of the model without controlling for the decision process indicate a negative effect of children on earnings. Our full model explains how this occurs, demonstrating the importance of modeling these key life decisions, while controlling for unobserved ability.</p></div><br>
+
+    <p style="margin:0"> <b>The Source of Athlete Admission Preferences:\\ A Structural Analysis of University Athletic Offerings</b> <br> with Ahmed El Fatmaoui. <br><button class="accordion">
+      Abstract
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> This study investigates the extent to which U.S. universities strategically use athletic admissions to shape their socioeconomic composition. Using a novel dataset linking NCAA roster data to high school characteristics, we document substantial socioeconomic segregation patterns across sports and universities. More selective institutions, particularly elite private universities, allocate upwards of 25\% of enrollment to athletes who typically come from higher-income backgrounds than the general student body. Estimates of our structural model of sports bundle choice reveal that universities offer specific sports as a pathway to enroll students from higher socioeconomic backgrounds, effectively creating a mechanism for preferential admission of high-income students. Our estimates also show heterogeneity by NCAA division. Counterfactual analyses examine how athletic enrollment restrictions and modified Title IX requirements would reshape university athletic offerings, with implications for institutional diversity and access.</p></div><br>
+
+    <p style="margin:0"> <b>Credit Constraints, College Major Choices, and Upward Mobility</b> <br> with <a href="https://www.menakahampole.com/">Menaka Hampole</a> and <a href="https://sites.google.com/view/jconzelmann">Johnathan G. Conzelmann</a>. <br><button class="accordion">
+      Abstract
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> We investigate how easing credit constraints affects college graduates' choices in majors and migration, focusing on the impact of student loan debt. Using a rich dataset combining university, credit bureau, and other records, we examine the effects of loan reduction or "No Loan" policies at select universities on students' major choices and migration decisions. By analyzing data across different dimensions, including parental financial constraints and socioeconomic networks, we aim to provide new insights into the relationship between education financing and upward economic mobility. </p></div><br>
+
+    <p style="margin:0"> <b>Elevation in Obesity: Uncovering the Geographical Aspects of Health</b> <br> with <a href="https://sites.google.com/site/pallabghoshou/">Pallab Ghosh</a>. <br><button class="accordion">
+      Abstract
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> Coming soon.</p></div>
+    <p style="margin:0"><button class="accordion">
+      Poster
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> <a href="https://tyleransom.github.io/research/ASHEcon-2025-obesity-elevation-poster.pdf">Poster</a>  </p></div><br>
+
+
+      </section>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    <script> 
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].onclick = function(){
+            this.classList.toggle("active");
+            this.parentNode.nextElementSibling.classList.toggle("show");
+      }
+    }
+    </script>
+  </body>
+</html>
