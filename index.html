@@ -24,99 +24,35 @@
 
     <style>
       /* 页面整体设置 */
-      body {
-        font: 14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-        color: #333;
-        margin: 0;
-        padding: 0;
-        background: #fff;
-      }
+      body { font: 14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif; color: #333; margin: 0; padding: 0; background: #fff; }
 
       /* wrapper 使用100%宽度，header左贴，section右贴 */
-      .wrapper {
-        display: flex;
-        width: 90%;
-        align-items: flex-start;  /* 顶部对齐 */
-        padding: 40px 40px;       /* 页面整体左右空白小 */
-        box-sizing: border-box;
-      }
-
+      .wrapper { display: flex; width: 90%; align-items: flex-start; padding: 40px 40px; box-sizing: border-box;}
       /* 左侧导航栏 */
-      header {
-        width: 220px;              /* 固定宽度 */
-        margin-right: 20px;        /* header与section之间空隙 */
-        padding: 20px;
-        box-sizing: border-box;
-      }
-
+      header { width: 220px; margin-right: 20px; padding: 20px; box-sizing: border-box; }
       /* 右侧正文 */
-      section {
-        width: 950px;              /* 固定宽度 */
-        margin-left: auto;         /* 右贴边 */
-        padding: 20px;
-        box-sizing: border-box;
-      }
+      section { width: 950px; margin-left: auto; padding: 20px; box-sizing: border-box;}
 
       /* accordion 折叠按钮 */
-      button.accordion {  
-        font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-        cursor: pointer;
-        padding: 0px;
-        border: none;
-        text-align: left;
-        outline: none;
-        font-size: 100%;
-        transition: 0.3s;
-        background-color: #f8f8f8;
-      }
-      button.accordion.active, button.accordion:hover {
-        background-color: #f8f8f8;
-      }
-      button.accordion:after {
-        content: " [+] ";
-        font-size: 90%;
-        color:#777;
-        float: left;
-        margin-left: 1px;
-      }
-      button.accordion.active:after {
-        content: " [\2212] ";
-      }
-
+      button.accordion {font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif; cursor: pointer; padding: 0px; border: none; 
+                        text-align: left; outline: none; font-size: 100%; transition: 0.3s; background-color: #f8f8f8;}
+      button.accordion.active, button.accordion:hover { background-color: #f8f8f8;}
+      button.accordion:after { content: " [+] "; font-size: 90%; color:#777; float: left; margin-left: 1px;}
+      button.accordion.active:after { content: " [\2212] ";}
       /* 折叠内容面板 */
-      div.panel {
-        padding: 0 8px;
-        margin-top: 5px;
-        display: none;
-        background-color: white;
-        font-size: 100%;
-      }
-      div.panel.show {
-        display: block !important;
-      }
-
+      div.panel { padding: 0 8px; margin-top: 5px; display: none; background-color: white; font-size: 100%; }
+      div.panel.show { display: block !important;}
       /* 社交链接行 */
-      .social-row {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
+      .social-row { display: flex; flex-wrap: wrap; justify-content: space-between; }
 
       /* 响应式：屏幕过小，header和section上下排列 */
       @media (max-width: 1200px) {
-        .wrapper {
-          flex-direction: column;
-          padding: 10px;
-        }
-        header, section {
-          width: 100%;
-          max-width: 100%;
-          margin: 0 0 20px 0;
-        }
-      }
+        .wrapper { flex-direction: column; padding: 10px; }
+        header, section { width: 100%; max-width: 100%; margin: 0 0 20px 0; }
+       }
     </style>
   </head>
-
+ 
   <body>
     <div class="wrapper">
       <!-- 左侧栏 -->
@@ -124,12 +60,12 @@
         <h1>Peihao Shi</h1>
         <p>Ph.D. in Economics<br>peihaoshi@163.com</p>
         <p>Research Fellow<br><a href="https://www.iza.org/person/24155/tyler-ransom">Institute for the Study of Labor (IZA)</a></p>
-        <p>Fellow<br><a href="https://glabor.org/user/tyleransom/">Global Labor Organization (GLO)</a></p>
         <h3><a href="https://beyoundsun.github.io/peihaoshi.github.io/">Home</a></h3>   
         <h3><a href="https://beyoundsun.github.io/peihaoshi.github.io/research.html">Research</a></h3>
-        <h3><a href="https://beyoundsun.github.io/peihaoshi.github.io/research/CV_SHI.pdf">CV</a></h3>  
         <h3><a href="https://beyoundsun.github.io/peihaoshi.github.io/code.html">Code</a></h3> 
-        <h3><a href="https://beyoundsun.github.io/peihaoshi.github.io/teaching.html">Teaching</a></h3> 
+        <h3><a href="https://beyoundsun.github.io/peihaoshi.github.io/teaching.html">Teaching</a></h3>
+        <h3><a href="https://beyoundsun.github.io/peihaoshi.github.io/ScholarLog.html">ScholarLog</a></h3>  
+        <h3><a href="https://beyoundsun.github.io/peihaoshi.github.io/research/CV_SHI.pdf">CV</a></h3>  
         <h3><a href="https://beyoundsun.github.io/peihaoshi.github.io/personal.html">Personal</a></h3>
         
         <b>Social</b><br>
